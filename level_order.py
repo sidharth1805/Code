@@ -18,12 +18,12 @@ class Solution:
 
             for i in range(len(q)):
                 x = q.popleft()
-                cur_ele.append()
+                cur_ele.append(x.val)
 
                 if x.left:
                     q.append(x.left)
 
-                if x.left:
-                    q.append(x.left)
+                if x.right:
+                    q.append(x.right)
 
             ans.append(cur_ele)
