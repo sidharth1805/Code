@@ -21,8 +21,8 @@ class solution:
             else:
                 cur = root.left
             while cur.right:
-                cur = cur.right 
+                cur = cur.right
             root.val = cur.val
             root.left = self.delete_Node(root.left, root.val)
-        
+
         return root
