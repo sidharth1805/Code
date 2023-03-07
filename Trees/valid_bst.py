@@ -14,7 +14,9 @@ class Solution:
             if not ((left < root.val) and (root.val < right)):
                 return False
 
-            return is_valid(root.left, left, root.val) and is_valid(root.right, root.val, right)
+            return is_valid(root.left, left, root.val) and is_valid(
+                root.right, root.val, right
+            )
 
         if is_valid(root, float("-inf"), float("inf")):
             return 1
