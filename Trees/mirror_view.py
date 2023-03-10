@@ -22,3 +22,17 @@ class Solution:
             if temp_node.right:
                 q.append(temp_node.right)
         return root
+
+    ##Using Recursion
+    def invertTree(self, root):
+        def mirror_view(root):
+            if not root:
+                return None
+            root.left, root.right = root.right, root.left
+
+            mirror_view(root.left)
+            mirror_view(root.right)
+
+        curr_node = root
+        mirror_view(curr_node)
+        return root
