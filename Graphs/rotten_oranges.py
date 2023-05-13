@@ -20,7 +20,7 @@ class Solution:
                 for row, column in dir:
                     nr = r + row
                     nc = c + column
-                    if(nr > 0 and nr != n and nc > 0 and nc != c and A[nr][nc] == 1):
+                    if(nr > 0 and nr < n and nc > 0 and nc < c and A[nr][nc] == 1):
                         q.append([nr, nc])
                         A[nr][nc] == 2
                         fresh -= 1
